@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="Near Now 附近小旅行時段表。用合成場次試排自己的散步行程，不提供訂位。">
+  <title>Near Now｜附近小旅行時段表</title>
+  <link rel="icon" type="image/svg+xml" href="assets/waymark.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="model.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="topbar">
+    <div class="wrap brand-row">
+      <a class="brand" href="./"><img src="assets/waymark.svg" alt="" width="36" height="36"><span>Near Now</span></a>
+      <a class="itinerary-link" href="#itinerary">我的行程 <span id="savedCount" class="count" aria-hidden="true">0</span></a>
+    </div>
+  </header>
+  <main class="wrap" id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow hero-label">探索手冊 <span> / </span> 07</p>
+        <h1 id="page-title">附近小旅行<span>時段表</span></h1>
+        <p class="intro">先看什麼時段有空，再決定往哪裡走。從集合區、所需時間和路程，排一段適合自己的小旅行。</p>
+        <p class="demo-notice"><b>合成示範</b> 所有場地及場次皆為虛構，只供試排行程，不提供訂位。</p>
+      </div>
+      <figure class="hero-art">
+        <img src="assets/tidal-walk.svg" alt="" width="540" height="300">
+        <figcaption>FIELD NOTES <span>01</span> <span>·</span> 潮岸散步圖</figcaption>
+      </figure>
+    </section>
+    <section class="filters" aria-labelledby="filters-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / 找時間</p>
+          <h2 id="filters-title">篩選場次</h2>
+        </div>
+        <button type="button" class="button button-quiet" id="reset">重設篩選</button>
+      </div>
+      <p class="anchor" id="anchor"></p>
+      <div class="filter-grid">
+        <label>場地日期<input id="date" type="date"></label>
+        <label>時段<select id="period"><option value="all">全天</option><option value="morning">上午</option><option value="afternoon">下午</option><option value="evening">傍晚與夜間</option></select></label>
+        <label>活動時長<select id="length"><option value="all">不限</option><option value="60">60 分鐘內</option><option value="90">90 分鐘內</option></select></label>
+        <label>集合區<select id="area"><option value="all">所有區域</option></select></label>
+        <label>我的出發區<select id="origin" aria-describedby="distance-help"><option value="">不指定</option></select></label>
+        <label>體力要求<select id="effort"><option value="all">不限</option><option value="gentle">輕量</option><option value="moderate">中等</option><option value="active">較高</option></select></label>
+      </div>
+      <p id="distance-help" class="filter-help">距離僅用手動選區估算，不代表實際步行路線；不存取定位。</p>
+      <div class="toggles">
+        <label><input id="family" type="checkbox">只看家庭友善</label>
+        <label><input id="openOnly" type="checkbox">只看開放的示範場次</label>
+      </div>
+    </section>
+    <div class="workspace">
+      <section class="timeline" aria-labelledby="timeline-title">
+        <div class="section-heading timeline-head">
+          <div>
+            <p class="eyebrow">02 / 看時段</p>
+            <h2 id="timeline-title">場次時間軸</h2>
+          </div>
+          <span class="timezone">場地時間 · UTC+08:00</span>
+        </div>
+        <p id="summary" class="summary" aria-live="polite" aria-atomic="true"></p>
+        <div id="results"></div>
+      </section>
+      <aside id="itinerary" class="itinerary" aria-labelledby="itinerary-title">
+        <p class="eyebrow">03 / 排行程</p>
+        <h2 id="itinerary-title">我的行程</h2>
+        <p class="muted">只儲存在這個瀏覽器，不是預約。實際出發前，請自行查看營運者官方資訊。</p>
+        <div id="saved"></div>
+      </aside>
+    </div>
+    <noscript><p class="warning">此本機示範需要 JavaScript 才能篩選或儲存場次。</p></noscript>
+  </main>
+  <footer class="footer"><div class="wrap"><span>Near Now / 附近小旅行時段表</span><span>原創場景・合成資料・本機示範</span></div></footer>
+  <dialog id="details" aria-labelledby="detailTitle"></dialog>
+  <div id="announce" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

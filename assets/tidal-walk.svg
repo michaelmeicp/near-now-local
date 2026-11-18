@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="300" viewBox="0 0 540 300">
+  <defs>
+    <pattern id="water" width="25" height="23" patternUnits="userSpaceOnUse"><path d="M2 11h7m5 0h5" stroke="#6b9e95" opacity=".25" stroke-linecap="round"/></pattern>
+    <pattern id="paper" width="10" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r=".6" fill="#566d57" opacity=".2"/></pattern>
+    <clipPath id="inset"><rect width="540" height="300" rx="18"/></clipPath>
+  </defs>
+  <g clip-path="url(#inset)">
+    <path fill="#d9ebe5" d="M0 0h540v300H0z"/>
+    <path fill="url(#water)" d="M0 0h540v300H0z"/>
+    <path fill="#accec2" d="M0 249c113-67 67-85 164-125S269 94 310 26l8-26H0z"/>
+    <path fill="#95bba8" d="M0 229c85-57 78-91 155-117S253 74 281 0H0z"/>
+    <path fill="#c6d5ad" d="M0 206c60-34 64-69 143-95 87-28 101-63 107-111H0z"/>
+    <path fill="#e6e7c9" d="M0 171c70-30 72-56 137-76C200 75 211 42 221 0H0z"/>
+    <path fill="url(#paper)" d="M0 206c60-34 64-69 143-95 87-28 101-63 107-111H0z"/>
+    <g fill="none" stroke="#547a66" opacity=".28" stroke-width="1.2">
+      <path d="M-13 50C21 73 67 67 79 45S127 14 154 29c21 12 5 34-25 37C87 72 82 92 57 105s-45 12-74 23"/>
+      <path d="M-14 34C32 57 51 52 63 32s58-40 92-21c36 20 22 54-17 64-53 14-50 50-116 61"/>
+      <path d="M-14 18c39 22 54 19 63 4S68 0 87-7"/>
+    </g>
+    <path d="M50 37 89 62q10 7 25 7l53 2q21 1 24 16l7 29q2 15-12 22l-31 15q-11 8-4 25t35 17l66-6" fill="none" stroke="#f8f4df" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M50 37 89 62q10 7 25 7l53 2q21 1 24 16l7 29q2 15-12 22l-31 15q-11 8-4 25t35 17l66-6" fill="none" stroke="#204e47" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1 7"/>
+    <g fill="#204e47" stroke="#f8f4df" stroke-width="2"><circle cx="50" cy="37" r="6"/><circle cx="252" cy="189" r="6"/></g>
+    <g transform="translate(281 168)">
+      <rect width="154" height="55" rx="10" fill="#f9f8ee"/>
+      <circle cx="25" cy="27.5" r="10" fill="none" stroke="#204e47" stroke-width="1.3"/><path d="M25 21.5v6l4 2" fill="none" stroke="#204e47" stroke-width="1.5" stroke-linecap="round"/>
+      <g font-family="system-ui,sans-serif" fill="#204e47"><text x="44" y="24" font-weight="700" font-size="13">SLOW WALK</text><text x="44" y="40" font-size="9" letter-spacing="2">FIELD STUDY</text></g>
+    </g>
+    <g transform="translate(469 50)" fill="#204e47"><circle r="21" stroke="#547a66" fill="none"/><path d="m6-9-3 12-9 6 3-12z"/><text y="-28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700">N</text></g>
+    <g fill="none" stroke="#5c9387" opacity=".6" stroke-linecap="round"><path d="M340 72h38m-50 14h57m60 43h31m-44 14h51M88 257h54m-32 15h45m275-13h51"/></g>
+    <g stroke="#95bba8" opacity=".55" stroke-width="1"><path d="M310 1v154m0 70v75M420 1v150m0 75v74M0 222h540"/></g>
+  </g>
+</svg>

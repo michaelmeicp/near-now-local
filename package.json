@@ -1,0 +1,1 @@
+{"name":"near-now-demo","version":"0.1.0","private":true,"description":"Offline, synthetic small-tour planning demo","scripts":{"test":"node --test *.test.js"}}
